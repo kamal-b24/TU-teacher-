@@ -1,0 +1,11 @@
+{
+  "name": "GradeMate AI",
+  "description": "Intelligent exam checker that analyzes question papers and handwritten answers using Gemini Vision AI.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "VISION_AI",
+    "HANDWRITING_RECOGNITION"
+  ]
+}
