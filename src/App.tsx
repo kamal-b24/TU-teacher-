@@ -135,18 +135,33 @@ export default function App() {
                     <h3 className="font-serif font-semibold text-xl text-natural-olive">Question Paper</h3>
                   </div>
                   
-                  <div className="relative group">
-                    <input 
-                      type="file" 
-                      multiple 
-                      accept="image/*"
-                      onChange={(e) => handleFileUpload('QP', e.target.files)}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                    />
-                    <div className="border border-dashed border-gray-200 rounded-2xl py-8 px-4 flex flex-col items-center justify-center gap-2 group-hover:bg-gray-50 transition-colors bg-white">
-                      <Upload size={24} className="text-gray-300 group-hover:text-natural-olive" />
-                      <span className="text-sm font-medium text-gray-600">Upload Images</span>
-                      <span className="text-xs text-gray-400">Supports multiple pages</span>
+                  <div className="flex flex-col gap-3">
+                    <div className="relative group">
+                      <input 
+                        type="file" 
+                        multiple 
+                        accept="image/*"
+                        onChange={(e) => handleFileUpload('QP', e.target.files)}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                      />
+                      <div className="border border-dashed border-gray-200 rounded-2xl py-6 px-4 flex flex-col items-center justify-center gap-2 group-hover:bg-gray-50 transition-colors bg-white">
+                        <Upload size={24} className="text-gray-300 group-hover:text-natural-olive" />
+                        <span className="text-sm font-medium text-gray-600">Upload Images</span>
+                      </div>
+                    </div>
+                    
+                    <div className="relative group">
+                      <input 
+                        type="file" 
+                        accept="image/*"
+                        capture="environment"
+                        onChange={(e) => handleFileUpload('QP', e.target.files)}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                      />
+                      <div className="border border-gray-100 rounded-2xl py-4 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors bg-white shadow-sm">
+                        <Upload size={18} className="text-natural-olive" />
+                        <span className="text-sm font-semibold text-natural-olive font-serif italic">Take Photo</span>
+                      </div>
                     </div>
                   </div>
 
@@ -174,18 +189,33 @@ export default function App() {
                     <h3 className="font-serif font-semibold text-xl text-natural-olive">Answer Sheet</h3>
                   </div>
                   
-                  <div className="relative group">
-                    <input 
-                      type="file" 
-                      multiple 
-                      accept="image/*"
-                      onChange={(e) => handleFileUpload('AS', e.target.files)}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                    />
-                    <div className="border border-dashed border-gray-200 rounded-2xl py-8 px-4 flex flex-col items-center justify-center gap-2 group-hover:bg-gray-50 transition-colors bg-white">
-                      <Upload size={24} className="text-gray-300 group-hover:text-natural-success" />
-                      <span className="text-sm font-medium text-gray-600">Upload Images</span>
-                      <span className="text-xs text-gray-400">Handwritten pages</span>
+                  <div className="flex flex-col gap-3">
+                    <div className="relative group">
+                      <input 
+                        type="file" 
+                        multiple 
+                        accept="image/*"
+                        onChange={(e) => handleFileUpload('AS', e.target.files)}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                      />
+                      <div className="border border-dashed border-gray-200 rounded-2xl py-6 px-4 flex flex-col items-center justify-center gap-2 group-hover:bg-gray-50 transition-colors bg-white">
+                        <Upload size={24} className="text-gray-300 group-hover:text-natural-success" />
+                        <span className="text-sm font-medium text-gray-600">Upload Images</span>
+                      </div>
+                    </div>
+
+                    <div className="relative group">
+                      <input 
+                        type="file" 
+                        accept="image/*"
+                        capture="environment"
+                        onChange={(e) => handleFileUpload('AS', e.target.files)}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                      />
+                      <div className="border border-gray-100 rounded-2xl py-4 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors bg-white shadow-sm">
+                        <Upload size={18} className="text-natural-success" />
+                        <span className="text-sm font-semibold text-natural-success font-serif italic">Take Photo</span>
+                      </div>
                     </div>
                   </div>
 
